@@ -20,7 +20,21 @@ img {
 
 /* style */
 body {
-    background: #eee;
+    background-image: url(./images/bg2.jpeg);
+    -moz-background-size:cover;
+    -ms-background-size:cover;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+
+@media (min-width: 500px) {
+    body {
+        background-image: url(./images/bg.jpeg);
+        -moz-background-size:cover;
+        -ms-background-size:cover;
+        -webkit-background-size:cover;
+        background-size:cover;    
+    }
 }
 
 .globalHeader {
@@ -119,12 +133,16 @@ body {
     position: absolute;
     right: 5px;
     top: 0px;
-    display: none;
-    cursor: default;
 }
 
-.siteList .site:hover > .close {
-    display: block;
+@media (min-width: 500px) {
+    .siteList .site > .close {
+        display: none;
+        cursor: default;
+    }
+    .siteList .site:hover > .close {
+        display: block;
+    }
 }
 
 .siteList .site > .logo {
